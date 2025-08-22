@@ -1,0 +1,15 @@
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/AtividadesApplication.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/commands/AtividadeCommand.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/commands/CreateAtividadeCommand.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/commands/DeleteAtividadeCommand.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/commands/UpdateAtividadeCommand.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/controllers/AtividadeController.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/controllers/FxPreviewController.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/dto/AtividadeDTO.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/entities/Atividade.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/infra/CorsConfig.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/records/AtividadeRecord.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/repositories/AtividadeRepository.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/security/SecurityConfig.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/services/AtividadeService.java
+/Users/alexandreesteves/java/atividades/src/main/java/br/com/teixeiraesteves/atividades/services/FxPreviewService.java
