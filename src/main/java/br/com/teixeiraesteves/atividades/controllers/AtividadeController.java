@@ -63,7 +63,13 @@ public class AtividadeController {
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
                         atividade.getDescricao(),
-                        atividade.getTag()
+                        atividade.getTag(),
+                        atividade.getDataEntradaManha(),
+                        atividade.getDataSaidaManha(),
+                        atividade.getDataEntradaTarde(),
+                        atividade.getDataSaidaTarde(),
+                        atividade.getDataEntradaNoite(),
+                        atividade.getDataSaidaNoite()
                 ))
                 .filter(atividade -> excessao.isEmpty() || !excessao.contains(atividade.categoria().trim()))
                 .filter(atividade -> categoriaFiltrada.isEmpty() || categoriaFiltrada.contains(atividade.categoria().trim()))
@@ -191,7 +197,14 @@ public class AtividadeController {
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
                         atividade.getDescricao(),
-                        atividade.getTag()))
+                        atividade.getTag(),
+                        atividade.getDataEntradaManha(),
+                        atividade.getDataSaidaManha(),
+                        atividade.getDataEntradaTarde(),
+                        atividade.getDataSaidaTarde(),
+                        atividade.getDataEntradaNoite(),
+                        atividade.getDataSaidaNoite()
+                ))
                 .toList();
         return ResponseEntity.ok(filteredLinks);
     }
@@ -200,13 +213,20 @@ public class AtividadeController {
     public ResponseEntity<?> getTags() {
         var filteredLinks = atividadeService.getAll().stream()
                 .map(atividade -> new AtividadeRecord(
-                        atividade.getId(),
-                        atividade.getName(),
-                        atividade.getUrl(),
-                        atividade.getCategoria(),
-                        atividade.getSubCategoria(),
-                        atividade.getDescricao(),
-                        atividade.getTag()))
+                    atividade.getId(),
+                    atividade.getName(),
+                    atividade.getUrl(),
+                    atividade.getCategoria(),
+                    atividade.getSubCategoria(),
+                    atividade.getDescricao(),
+                    atividade.getTag(),
+                    atividade.getDataEntradaManha(),
+                    atividade.getDataSaidaManha(),
+                    atividade.getDataEntradaTarde(),
+                    atividade.getDataSaidaTarde(),
+                    atividade.getDataEntradaNoite(),
+                    atividade.getDataSaidaNoite()
+                ))
                 .toList();
         return ResponseEntity.ok(filteredLinks);
     }
@@ -229,7 +249,13 @@ public class AtividadeController {
                 body.categoria(),
                 body.subCategoria(),
                 body.descricao(),
-                body.tag()
+                body.tag(),
+                body.dataEntradaManha(),
+                body.dataSaidaManha(),
+                body.dataEntradaTarde(),
+                body.dataSaidaTarde(),
+                body.dataEntradaNoite(),
+                body.dataSaidaNoite()
         );
         atividadeService.processCommand(command);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -249,6 +275,12 @@ public class AtividadeController {
         dto.setSubCategoria(atividade.getSubCategoria());
         dto.setDescricao(atividade.getDescricao());
         dto.setTag(atividade.getTag());
+        dto.setDataEntradaManha(atividade.getDataEntradaManha());
+        dto.setDataSaidaManha(atividade.getDataSaidaManha());
+        dto.setDataEntradaTarde(atividade.getDataEntradaTarde());
+        dto.setDataSaidaTarde(atividade.getDataSaidaTarde());
+        dto.setDataEntradaNoite(atividade.getDataEntradaNoite());
+        dto.setDataSaidaNoite(atividade.getDataSaidaNoite());
         return dto;
     }
 

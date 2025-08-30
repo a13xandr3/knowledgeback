@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.JsonNode;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.Executors;
 
@@ -30,6 +31,7 @@ public class AtividadeService {
     public void processCommand(AtividadeCommand command) {
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             executor.submit(() -> {
+                var now = LocalDateTime.now();
                 switch (command) {
                     case CreateAtividadeCommand c -> {
                         Atividade atividade = new Atividade();
@@ -39,6 +41,13 @@ public class AtividadeService {
                         atividade.setSubCategoria(c.subCategoria());
                         atividade.setDescricao(c.descricao());
                         atividade.setTag(c.tag());
+                        atividade.setDataEntradaManha(c.dataEntradaManha());
+                        atividade.setDataSaidaManha(c.dataSaidaManha());
+                        atividade.setDataEntradaTarde(c.dataEntradaTarde());
+                        atividade.setDataSaidaTarde(c.dataSaidaTarde());
+                        atividade.setDataEntradaNoite(c.dataEntradaNoite());
+                        atividade.setDataSaidaNoite(c.dataSaidaNoite());
+                        atividade.setCreatedAt(now);
                         atividadeRepository.save(atividade);
                         logAsJson("link criado", c.name(), c.url());
                     }
@@ -51,6 +60,13 @@ public class AtividadeService {
                         exist.setSubCategoria(u.subCategoria());
                         exist.setDescricao(u.descricao());
                         exist.setTag(u.tag());
+                        exist.setDataEntradaManha(u.dataEntradaManha());
+                        exist.setDataSaidaManha(u.dataSaidaManha());
+                        exist.setDataEntradaTarde(u.dataEntradaTarde());
+                        exist.setDataSaidaTarde(u.dataSaidaTarde());
+                        exist.setDataEntradaNoite(u.dataEntradaNoite());
+                        exist.setDataSaidaNoite(u.dataSaidaNoite());
+                        exist.setUpdatedAt(now);
                         atividadeRepository.save(exist);
                         logAsJson("Link atualizado", u.name(), u.url());
                     }
