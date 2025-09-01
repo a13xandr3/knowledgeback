@@ -37,6 +37,7 @@ public class AtividadeService {
                         Atividade atividade = new Atividade();
                         atividade.setName(c.name());
                         atividade.setUrl(c.url());
+                        atividade.setUri(c.uri());
                         atividade.setCategoria(c.categoria());
                         atividade.setSubCategoria(c.subCategoria());
                         atividade.setDescricao(c.descricao());
@@ -56,6 +57,7 @@ public class AtividadeService {
                         exist.setId(u.id());
                         exist.setName(u.name());
                         exist.setUrl(u.url());
+                        exist.setUri(u.uri());
                         exist.setCategoria(u.categoria());
                         exist.setSubCategoria(u.subCategoria());
                         exist.setDescricao(u.descricao());

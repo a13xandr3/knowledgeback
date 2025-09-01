@@ -11,9 +11,9 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AtividadeDTO {
-
     private String name;
     private String url;
+    private Map<String, Object> uri;
     private String categoria;
     private String subCategoria;
     private String descricao;
@@ -26,5 +26,4 @@ public class AtividadeDTO {
     private LocalDateTime dataSaidaTarde;
     private LocalDateTime dataEntradaNoite;
     private LocalDateTime dataSaidaNoite;
-
 }

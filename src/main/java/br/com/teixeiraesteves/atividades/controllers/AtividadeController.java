@@ -60,6 +60,7 @@ public class AtividadeController {
                         atividade.getId(),
                         atividade.getName(),
                         atividade.getUrl(),
+                        atividade.getUri(),
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
                         atividade.getDescricao(),
@@ -194,6 +195,7 @@ public class AtividadeController {
                         atividade.getId(),
                         atividade.getName(),
                         atividade.getUrl(),
+                        atividade.getUri(),
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
                         atividade.getDescricao(),
@@ -216,6 +218,7 @@ public class AtividadeController {
                     atividade.getId(),
                     atividade.getName(),
                     atividade.getUrl(),
+                    atividade.getUri(),
                     atividade.getCategoria(),
                     atividade.getSubCategoria(),
                     atividade.getDescricao(),
@@ -246,6 +249,7 @@ public class AtividadeController {
         UpdateAtividadeCommand command = new UpdateAtividadeCommand(id,
                 body.name(),
                 body.url(),
+                body.uri(),
                 body.categoria(),
                 body.subCategoria(),
                 body.descricao(),
@@ -271,6 +275,7 @@ public class AtividadeController {
         AtividadeDTO dto = new AtividadeDTO();
         dto.setName(atividade.getName());
         dto.setUrl(atividade.getUrl());
+        dto.setUri(atividade.getUri());
         dto.setCategoria(atividade.getCategoria());
         dto.setSubCategoria(atividade.getSubCategoria());
         dto.setDescricao(atividade.getDescricao());

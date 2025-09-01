@@ -5,6 +5,7 @@ import java.util.Map;
 
 public record CreateAtividadeCommand(String name,
                                      String url,
+                                     Map<String, Object> uri,
                                      String categoria,
                                      String subCategoria,
                                      String descricao,
