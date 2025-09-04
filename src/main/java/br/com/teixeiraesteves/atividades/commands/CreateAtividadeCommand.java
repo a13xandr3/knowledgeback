@@ -16,4 +16,4 @@ public record CreateAtividadeCommand(String name,
                                      LocalDateTime dataSaidaTarde,
                                      LocalDateTime dataEntradaNoite,
                                      LocalDateTime dataSaidaNoite
-) implements AtividadeCommand {}
+) implements AtividadeCommand { }

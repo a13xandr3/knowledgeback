@@ -267,7 +267,7 @@ public class AtividadeController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        atividadeService.processCommand(new DeleteAtividadeCommand((id)));
+        atividadeService.processCommand(new DeleteAtividadeCommand(id));
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
