@@ -36,7 +36,6 @@ public class AtividadeService {
                     case CreateAtividadeCommand c -> {
                         Atividade atividade = new Atividade();
                         atividade.setName(c.name());
-                        atividade.setUrl(c.url());
                         atividade.setUri(c.uri());
                         atividade.setCategoria(c.categoria());
                         atividade.setSubCategoria(c.subCategoria());
@@ -50,13 +49,12 @@ public class AtividadeService {
                         atividade.setDataSaidaNoite(c.dataSaidaNoite());
                         atividade.setCreatedAt(now);
                         atividadeRepository.save(atividade);
-                        logAsJson("link criado", c.name(), c.url());
+                        logAsJson("link criado", c.name());
                     }
                     case UpdateAtividadeCommand u -> {
                         Atividade exist = atividadeRepository.findById(u.id()).orElseThrow();
                         exist.setId(u.id());
                         exist.setName(u.name());
-                        exist.setUrl(u.url());
                         exist.setUri(u.uri());
                         exist.setCategoria(u.categoria());
                         exist.setSubCategoria(u.subCategoria());
@@ -70,11 +68,11 @@ public class AtividadeService {
                         exist.setDataSaidaNoite(u.dataSaidaNoite());
                         exist.setUpdatedAt(now);
                         atividadeRepository.save(exist);
-                        logAsJson("Link atualizado", u.name(), u.url());
+                        logAsJson("Link atualizado", u.name());
                     }
                     case DeleteAtividadeCommand d -> {
                         atividadeRepository.deleteById(d.id());
-                        logAsJson("Link deletado", "ID: " + d.id(), "");
+                        logAsJson("Link deletado", "ID: " + d.id());
                     }
                     default -> throw new IllegalArgumentException("Comando desconhecido");
                 }
@@ -82,14 +80,13 @@ public class AtividadeService {
         }
     }
 
-    private void logAsJson(String status, String campo1, String campo2) {
+    private void logAsJson(String status, String campo1) {
         String json = """
                 {
                     "status": "%s",
-                    "campo1": "%s",
-                    "campo2": "%s"
+                    "campo1": "%s"
                 }
-                """.formatted(status, campo1, campo2);
+                """.formatted(status, campo1);
         System.out.println(json);
     }
 

@@ -59,7 +59,6 @@ public class AtividadeController {
                 .map(atividade -> new AtividadeRecord(
                         atividade.getId(),
                         atividade.getName(),
-                        atividade.getUrl(),
                         atividade.getUri(),
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
@@ -194,7 +193,6 @@ public class AtividadeController {
                 .map(atividade -> new AtividadeRecord(
                         atividade.getId(),
                         atividade.getName(),
-                        atividade.getUrl(),
                         atividade.getUri(),
                         atividade.getCategoria(),
                         atividade.getSubCategoria(),
@@ -217,7 +215,6 @@ public class AtividadeController {
                 .map(atividade -> new AtividadeRecord(
                     atividade.getId(),
                     atividade.getName(),
-                    atividade.getUrl(),
                     atividade.getUri(),
                     atividade.getCategoria(),
                     atividade.getSubCategoria(),
@@ -248,7 +245,6 @@ public class AtividadeController {
     public ResponseEntity<Void> update(@PathVariable Long id, @RequestBody UpdateAtividadeCommand body) {
         UpdateAtividadeCommand command = new UpdateAtividadeCommand(id,
                 body.name(),
-                body.url(),
                 body.uri(),
                 body.categoria(),
                 body.subCategoria(),
@@ -274,7 +270,6 @@ public class AtividadeController {
     AtividadeDTO toLinkDTO(Atividade atividade) {
         AtividadeDTO dto = new AtividadeDTO();
         dto.setName(atividade.getName());
-        dto.setUrl(atividade.getUrl());
         dto.setUri(atividade.getUri());
         dto.setCategoria(atividade.getCategoria());
         dto.setSubCategoria(atividade.getSubCategoria());

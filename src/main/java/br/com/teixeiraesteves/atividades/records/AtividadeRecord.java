@@ -5,7 +5,6 @@ import java.util.Map;
 
 public record AtividadeRecord(Long id,
                               String name,
-                              String url,
                               Map<String, Object> uri,
                               String categoria,
                               String subCategoria,

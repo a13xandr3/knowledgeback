@@ -12,7 +12,6 @@ import java.util.Map;
 @NoArgsConstructor
 public class AtividadeDTO {
     private String name;
-    private String url;
     private Map<String, Object> uri;
     private String categoria;
     private String subCategoria;

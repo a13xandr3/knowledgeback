@@ -28,9 +28,6 @@ public class Atividade {
     @Column(columnDefinition = "TEXT")
     private String name;
 
-    @Column(columnDefinition = "TEXT")
-    private String url;
-
     @Column(columnDefinition = "json")
     @Convert(converter = JsonMapConverter.class)
     private Map<String, Object> uri;

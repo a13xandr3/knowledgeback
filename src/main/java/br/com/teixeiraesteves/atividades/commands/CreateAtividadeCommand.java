@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 public record CreateAtividadeCommand(String name,
-                                     String url,
                                      Map<String, Object> uri,
                                      String categoria,
                                      String subCategoria,
