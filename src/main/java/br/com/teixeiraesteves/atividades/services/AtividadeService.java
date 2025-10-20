@@ -35,12 +35,14 @@ public class AtividadeService {
                 switch (command) {
                     case CreateAtividadeCommand c -> {
                         Atividade atividade = new Atividade();
+
                         atividade.setName(c.name());
                         atividade.setUri(c.uri());
                         atividade.setCategoria(c.categoria());
                         atividade.setSubCategoria(c.subCategoria());
                         atividade.setDescricao(c.descricao());
                         atividade.setTag(c.tag());
+                        atividade.setFileID(c.fileID());
                         atividade.setDataEntradaManha(c.dataEntradaManha());
                         atividade.setDataSaidaManha(c.dataSaidaManha());
                         atividade.setDataEntradaTarde(c.dataEntradaTarde());
@@ -53,6 +55,7 @@ public class AtividadeService {
                     }
                     case UpdateAtividadeCommand u -> {
                         Atividade exist = atividadeRepository.findById(u.id()).orElseThrow();
+
                         exist.setId(u.id());
                         exist.setName(u.name());
                         exist.setUri(u.uri());
@@ -60,6 +63,7 @@ public class AtividadeService {
                         exist.setSubCategoria(u.subCategoria());
                         exist.setDescricao(u.descricao());
                         exist.setTag(u.tag());
+                        exist.setFileID(u.fileID());
                         exist.setDataEntradaManha(u.dataEntradaManha());
                         exist.setDataSaidaManha(u.dataSaidaManha());
                         exist.setDataEntradaTarde(u.dataEntradaTarde());

@@ -17,6 +17,7 @@ public class CorsConfig {
         // ajuste os origins conforme seu front
         config.setAllowedOrigins(List.of(
                 "http://localhost:4205",
+                "http://localhost:4206",
                 "http://localhost:8081"
                 ));
         config.setAllowedMethods(List.of(

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
@@ -29,23 +30,16 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(cors -> cors.configurationSource(corsConfigurationSource))
                 .csrf(csrf -> csrf.disable())
-                .headers(h -> h.frameOptions(f -> f.sameOrigin()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/atividade/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/atividade").authenticated()
-                        .requestMatchers(HttpMethod.PUT,  "/api/atividade/**").authenticated()
-                        .requestMatchers(HttpMethod.DELETE,"/api/atividade/**").authenticated()
+                        .requestMatchers("/api/auth/**").permitAll()                    // login liberado
+                        .requestMatchers(HttpMethod.GET, "/api/atividade/links").permitAll() // opcional: autocomplete público
                         .anyRequest().authenticated()
                 )
-                .httpBasic(b -> b.disable())
-                .formLogin(f -> f.disable())
-                .oauth2ResourceServer(oauth -> oauth.jwt()); // usa o JwtDecoder acima
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults())); // valida JWT
+
         return http.build();
     }
 
