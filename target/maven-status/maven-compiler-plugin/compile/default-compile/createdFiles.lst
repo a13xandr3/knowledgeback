@@ -1,11 +1,16 @@
 br/com/teixeiraesteves/atividades/infra/JwtUtil.class
+br/com/teixeiraesteves/atividades/services/EncryptionService.class
 br/com/teixeiraesteves/atividades/dto/UploadItem.class
+br/com/teixeiraesteves/atividades/services/TwoFactorAuthService.class
 br/com/teixeiraesteves/atividades/dto/SnapshotResponse.class
 br/com/teixeiraesteves/atividades/commands/CreateAtividadeCommand.class
 br/com/teixeiraesteves/atividades/infra/CorsConfig.class
 br/com/teixeiraesteves/atividades/AtividadesApplication.class
 br/com/teixeiraesteves/atividades/controllers/FileController.class
+br/com/teixeiraesteves/atividades/controllers/TwoFactorAuthController.class
 br/com/teixeiraesteves/atividades/controllers/AuthController.class
+br/com/teixeiraesteves/atividades/repositories/UserRepository.class
+br/com/teixeiraesteves/atividades/services/JwtService.class
 br/com/teixeiraesteves/atividades/security/SecurityConfig.class
 br/com/teixeiraesteves/atividades/controllers/AtividadeController.class
 br/com/teixeiraesteves/atividades/entities/FileEntity.class
@@ -14,6 +19,7 @@ br/com/teixeiraesteves/atividades/commands/AtividadeCommand.class
 br/com/teixeiraesteves/atividades/repositories/AtividadeRepository.class
 br/com/teixeiraesteves/atividades/commands/UpdateAtividadeCommand.class
 br/com/teixeiraesteves/atividades/entities/HashMode.class
+br/com/teixeiraesteves/atividades/entities/User.class
 br/com/teixeiraesteves/atividades/persistence/JsonMapConverter.class
 br/com/teixeiraesteves/atividades/controllers/AuthController$LoginRequest.class
 br/com/teixeiraesteves/atividades/entities/Atividade.class

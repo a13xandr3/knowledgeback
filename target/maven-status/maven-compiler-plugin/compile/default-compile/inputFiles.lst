@@ -6,6 +6,7 @@
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/controllers/AtividadeController.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/controllers/AuthController.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/controllers/FileController.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/controllers/TwoFactorAuthController.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/dto/AtividadeDTO.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/dto/FileSavedResponse.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/dto/IdsRequest.java
@@ -14,12 +15,17 @@
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/entities/Atividade.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/entities/FileEntity.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/entities/HashMode.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/entities/User.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/infra/CorsConfig.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/infra/JwtUtil.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/persistence/JsonMapConverter.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/records/AtividadeRecord.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/repositories/AtividadeRepository.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/repositories/FileRepository.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/repositories/UserRepository.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/security/SecurityConfig.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/services/AtividadeService.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/services/EncryptionService.java
 /Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/services/FileService.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/services/JwtService.java
+/Users/alexandreesteves/java/knowledgeback/src/main/java/br/com/teixeiraesteves/atividades/services/TwoFactorAuthService.java
